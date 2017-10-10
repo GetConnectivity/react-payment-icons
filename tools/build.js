@@ -9,7 +9,7 @@ const commonjs = require('rollup-plugin-commonjs');
 const uglify = require('rollup-plugin-uglify');
 const pkg = require('../package.json');
 
-const babelPresets = [["env", {"modules": false}]];
+const babelPresets = [["env", {"modules": false}], "react"];
 const babelPlugins = [
     "transform-class-properties",
     "external-helpers"
@@ -64,10 +64,7 @@ for (const config of bundles) {
                 main: true,
                 browser: true,
             }),
-            commonjs({
-                include: ['node_modules/**'],
-                namedExports: {'node_modules/react/index.js': ["Component"]}
-            }),
+            commonjs(),
             babel({
                 babelrc: false,
                 exclude: 'node_modules/**',

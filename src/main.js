@@ -1,1 +1,3 @@
-import visa from './visa'
+import InternalVisa from './visa'
+
+export const Visa = InternalVisa;

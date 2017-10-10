@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-export default class visa extends Component {
+export default class Visa extends Component {
 
     static propTypes = {
         type: PropTypes.string,
@@ -32,7 +32,7 @@ export default class visa extends Component {
         let p = this.props;
         let h = `${p.height}px`;
         let w = `${p.width}px`;
-        /*
+
         return (
             <svg width={w} height={h} viewBox="0 0 750 471" version="1.1" xmlns="http://www.w3.org/2000/svg">
                 <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
@@ -47,14 +47,13 @@ export default class visa extends Component {
                 </g>
             </svg>
         );
-        */
     }
 
     renderMono = () => {
         let p = this.props;
         let h = `${p.height}px`;
         let w = `${p.width}px`;
-        /*
+
         return (
             <svg width={w} height={h} viewBox="0 0 750 471" version="1.1" xmlns="http://www.w3.org/2000/svg">
                 <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
@@ -64,6 +63,5 @@ export default class visa extends Component {
                 </g>
             </svg>
         )
-        */
     }
 }

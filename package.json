@@ -19,15 +19,18 @@
     "url": "https://github.com/GetConnectivity/react-payment-icons/issues"
   },
   "homepage": "https://github.com/GetConnectivity/react-payment-icons#readme",
-  "dependencies": {},
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
     "del": "^3.0.0",
     "prop-types": "^15.6.0",
-    "react": "^16.0.0",
     "rollup": "^0.50.0",
     "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-commonjs": "^8.2.1",
