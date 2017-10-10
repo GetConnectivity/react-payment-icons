@@ -1,10 +1,3 @@
-/**
- * ! library : react-payment-icons.js
- * ! version : 0.2.0
- * ! license : MPL-2.0 (https://www.mozilla.org/en-US/MPL/2.0/)
- * ! source : https://github.com/GetConnectivity/react-payment-icons
- */
-
 (function (global, factory) {
 	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react'), require('prop-types')) :
 	typeof define === 'function' && define.amd ? define(['exports', 'react', 'prop-types'], factory) :
@@ -535,6 +528,11 @@ Amex$1.defaultProps = {
     height: 37,
     width: 45
 };
+
+//! library : react-payment-icons.js
+//! version : 0.2.0
+//! license : MPL-2.0 (https://www.mozilla.org/en-US/MPL/2.0/)
+//! source : https://github.com/GetConnectivity/react-payment-icons
 
 var Visa = Visa$1;
 var Discover = Discover$1;

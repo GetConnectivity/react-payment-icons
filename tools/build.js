@@ -6,8 +6,6 @@ const rollup = require('rollup');
 const babel = require('rollup-plugin-babel');
 const resolve = require('rollup-plugin-node-resolve');
 const commonjs = require('rollup-plugin-commonjs');
-const uglify = require('rollup-plugin-uglify');
-const license = require('rollup-plugin-license');
 const pkg = require('../package.json');
 
 const babelPresets = [["env", {"modules": false}], "react"];
@@ -35,12 +33,6 @@ for (const config of bundles) {
         input: "src/main.js",
         external: Object.keys(pkg.dependencies),
         plugins: [
-            license({
-                banner: {
-                    file: "src/banner.txt",
-                    encoding: "utf-8"
-                }
-            }),
             resolve({
                 jsnext: true,
                 main: true,
