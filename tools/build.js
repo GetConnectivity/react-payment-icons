@@ -17,36 +17,11 @@ const babelPlugins = [
 
 const bundles = [
     {
-        format: 'cjs', ext: '.js',
-        plugins: [],
-        babelPresets: babelPresets,
-        babelPlugins: babelPlugins,
-    },
-    {
-        format: 'es', ext: '.mjs',
-        plugins: [],
-        babelPresets: babelPresets,
-        babelPlugins: babelPlugins,
-    },
-    {
-        format: 'cjs', ext: '.browser.js',
-        plugins: [],
-        babelPresets: babelPresets,
-        babelPlugins: babelPlugins,
-    },
-    {
         format: 'umd', ext: '.js',
         plugins: [],
         babelPresets: babelPresets,
         babelPlugins: babelPlugins,
         moduleName: 'react-payment-icons'
-    },
-    {
-        format: 'umd', ext: '.min.js',
-        moduleName: 'react-payment-icons', minify: true,
-        plugins: [uglify()],
-        babelPresets: babelPresets,
-        babelPlugins: babelPlugins,
     }
 ];
 

@@ -3,9 +3,7 @@
   "version": "0.1.0",
   "description": "React Payment Icons",
   "main": "dist/main.js",
-  "jsnext:main": "dist/main.mjs",
-  "module": "dist/main.mjs",
-  "browser": "dis/main.browser.js",
+  "jsnext:main": "dist/react-payment-icons.js",
   "scripts": {
     "build": "node tools/build"
   },
