@@ -2,10 +2,8 @@
   "name": "react-payment-icons",
   "version": "0.1.0",
   "description": "React Payment Icons",
-  "main": "dist/main.js",
-  "jsnext:main": "dist/main.mjs",
-  "module": "dist/main.mjs",
-  "browser": "dis/main.browser.js",
+  "main": "dist/react-payment-icons.js",
+  "jsnext:main": "src/main.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GetConnectivity/react-payment-icons.git"
@@ -18,6 +16,6 @@
   "homepage": "https://github.com/GetConnectivity/react-payment-icons#readme",
   "dependencies": {
     "prop-types": "^15.6.0",
-    "react": "^16.0.0"
+    "react": "^15.4.2"
   }
 }
