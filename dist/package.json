@@ -1,6 +1,6 @@
 {
   "name": "react-payment-icons",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "React Payment Icons",
   "main": "dist/react-payment-icons.js",
   "jsnext:main": "src/main.js",
