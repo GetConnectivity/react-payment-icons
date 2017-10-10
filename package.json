@@ -1,0 +1,37 @@
+{
+  "name": "react-payment-icons",
+  "version": "0.1.0",
+  "description": "React Payment Icons",
+  "main": "dist/main.js",
+  "jsnext:main": "dist/main.mjs",
+  "module": "dist/main.mjs",
+  "browser": "dis/main.browser.js",
+  "scripts": {
+    "build": "node tools/build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GetConnectivity/react-payment-icons.git"
+  },
+  "author": "Daniel Reed",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/GetConnectivity/react-payment-icons/issues"
+  },
+  "homepage": "https://github.com/GetConnectivity/react-payment-icons#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.0",
+    "del": "^3.0.0",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "rollup": "^0.50.0",
+    "rollup-plugin-babel": "^3.0.2",
+    "rollup-plugin-commonjs": "^8.2.1",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-uglify": "^2.0.1"
+  }
+}

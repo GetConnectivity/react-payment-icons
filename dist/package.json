@@ -1,0 +1,20 @@
+{
+  "name": "react-payment-icons",
+  "version": "1.0.0",
+  "description": "React Payment Icons",
+  "main": "dist/main.js",
+  "jsnext:main": "dist/main.mjs",
+  "module": "dist/main.mjs",
+  "browser": "dis/main.browser.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GetConnectivity/react-payment-icons.git"
+  },
+  "author": "Daniel Reed",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/GetConnectivity/react-payment-icons/issues"
+  },
+  "homepage": "https://github.com/GetConnectivity/react-payment-icons#readme",
+  "dependencies": {}
+}
