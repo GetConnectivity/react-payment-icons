@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import {DEFAULT_HEIGHT, DEFAULT_WIDTH} from "./const";
 
 export default class Amex extends Component {
 
@@ -11,8 +12,8 @@ export default class Amex extends Component {
 
     static defaultProps = {
         type: "flat",
-        height: 37,
-        width: 45,
+        height: DEFAULT_HEIGHT,
+        width: DEFAULT_WIDTH,
     }
 
     constructor(props, context) {

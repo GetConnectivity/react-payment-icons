@@ -7,6 +7,9 @@
 var React__default = 'default' in React ? React['default'] : React;
 PropTypes = PropTypes && PropTypes.hasOwnProperty('default') ? PropTypes['default'] : PropTypes;
 
+var DEFAULT_HEIGHT = 29;
+var DEFAULT_WIDTH = 45;
+
 var asyncGenerator = function () {
   function AwaitValue(value) {
     this.value = value;
@@ -269,8 +272,8 @@ Visa$1.propTypes = {
 };
 Visa$1.defaultProps = {
     type: "flat",
-    height: 37,
-    width: 45
+    height: DEFAULT_HEIGHT,
+    width: DEFAULT_WIDTH
 };
 
 var Discover$1 = function (_Component) {
@@ -345,8 +348,8 @@ Discover$1.propTypes = {
 };
 Discover$1.defaultProps = {
     type: "flat",
-    height: 37,
-    width: 45
+    height: DEFAULT_HEIGHT,
+    width: DEFAULT_WIDTH
 };
 
 var Mastercard$1 = function (_Component) {
@@ -445,8 +448,8 @@ Mastercard$1.propTypes = {
 };
 Mastercard$1.defaultProps = {
     type: "flat",
-    height: 37,
-    width: 45
+    height: DEFAULT_HEIGHT,
+    width: DEFAULT_WIDTH
 };
 
 var Amex$1 = function (_Component) {
@@ -525,8 +528,8 @@ Amex$1.propTypes = {
 };
 Amex$1.defaultProps = {
     type: "flat",
-    height: 37,
-    width: 45
+    height: DEFAULT_HEIGHT,
+    width: DEFAULT_WIDTH
 };
 
 //! library : react-payment-icons.js
