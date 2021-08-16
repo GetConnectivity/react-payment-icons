@@ -1,17 +1,18 @@
 'use strict';
+const NODE_ENV = process.env.NODE_ENV || "development";
 
-const fs = require('fs');
-const del = require('del');
-const rollup = require('rollup');
-const babel = require('rollup-plugin-babel');
-const resolve = require('rollup-plugin-node-resolve');
-const commonjs = require('rollup-plugin-commonjs');
-const pkg = require('../package.json');
+const fs = require('fs')
+const del = require('del')
+const rollup = require('rollup')
+const replace = require('@rollup/plugin-replace')
+const {babel} = require('@rollup/plugin-babel')
+const {nodeResolve} = require('@rollup/plugin-node-resolve')
+const commonjs = require('@rollup/plugin-commonjs')
+const pkg = require('../package.json')
 
-const babelPresets = [["env", {"modules": false}], "react"];
+const babelPresets = [["@babel/preset-env", {"modules": false}], "@babel/preset-react"];
 const babelPlugins = [
-    "transform-class-properties",
-    "external-helpers"
+    "@babel/plugin-external-helpers"
 ];
 
 const bundles = [
@@ -20,6 +21,7 @@ const bundles = [
         plugins: [],
         babelPresets: babelPresets,
         babelPlugins: babelPlugins,
+        babelHelpers: "external",
         moduleName: 'react-payment-icons'
     }
 ];
@@ -31,20 +33,25 @@ promise = promise.then(() => del(['dist/*']));
 for (const config of bundles) {
     promise = promise.then(() => rollup.rollup({
         input: "src/main.js",
-        external: Object.keys(pkg.dependencies),
+        external: Object.keys(pkg.peerDependencies),
         plugins: [
-            resolve({
-                jsnext: true,
-                main: true,
-                browser: true,
+            replace({
+                "process.env.NODE_ENV": JSON.stringify(NODE_ENV),
+                preventAssignment: true,
             }),
-            commonjs(),
             babel({
                 babelrc: false,
                 exclude: 'node_modules/**',
                 presets: config.babelPresets,
                 plugins: config.babelPlugins,
-            })
+                babelHelpers: config.babelHelpers,
+            }),
+            nodeResolve({
+                jsnext: true,
+                main: true,
+                browser: true,
+            }),
+            commonjs()
         ].concat(config.plugins),
     }).then(bundle => bundle.write({
         file: `dist/${config.moduleName || 'main'}${config.ext}`,
@@ -60,6 +67,7 @@ promise = promise.then(() => {
     delete pkg.scripts;
     delete pkg.eslintConfig;
     delete pkg.babel;
+
     fs.writeFileSync('dist/package.json', JSON.stringify(pkg, null, '  '), 'utf-8');
     fs.writeFileSync('dist/LICENSE', fs.readFileSync('LICENSE', 'utf-8'), 'utf-8');
 });

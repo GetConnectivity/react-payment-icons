@@ -7,8 +7,12 @@ import visa from './visa'
 import discover from './discover'
 import mastercard from './mastercard'
 import amex from './amex'
+import cup from './cup'
+import jcb from './jcb'
 
 export const Visa = visa;
 export const Discover = discover;
 export const Mastercard = mastercard;
 export const Amex = amex;
+export const Cup = cup;
+export const Jcb = jcb;
