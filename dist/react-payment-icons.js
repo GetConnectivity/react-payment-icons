@@ -459,12 +459,12 @@
         }, /*#__PURE__*/React__default['default'].createElement("g", {
           id: "Page-1",
           stroke: "none",
-          "stroke-width": "1",
+          strokeWidth: "1",
           fill: "none",
-          "fill-rule": "evenodd"
+          fillRule: "evenodd"
         }, /*#__PURE__*/React__default['default'].createElement("g", {
           id: "diners",
-          "fill-rule": "nonzero"
+          fillRule: "nonzero"
         }, /*#__PURE__*/React__default['default'].createElement("rect", {
           id: "rectangle",
           fill: "#0079BE",
@@ -502,13 +502,13 @@
         }, /*#__PURE__*/React__default['default'].createElement("g", {
           id: "Page-1",
           stroke: "none",
-          "stroke-width": "1",
+          strokeWidth: "1",
           fill: "none",
-          "fill-rule": "evenodd"
+          fillRule: "evenodd"
         }, /*#__PURE__*/React__default['default'].createElement("g", {
           id: "diners",
           fill: "#393939",
-          "fill-rule": "nonzero"
+          fillRule: "nonzero"
         }, /*#__PURE__*/React__default['default'].createElement("path", {
           d: "M0,40.0047706 C0,17.9107459 17.9143492,0 39.9919369,0 L710.008063,0 C732.095,0 750,17.9064659 750,40.0047706 L750,430.995229 C750,453.089254 732.085651,471 710.008063,471 L39.9919369,471 C17.905,471 0,453.093534 0,430.995229 L0,40.0047706 Z M584.933911,236.947339 C584.933911,137.53154 501.952976,68.8140806 411.038924,68.8471464 L332.79674,68.8471464 C240.793699,68.8140806 165.066089,137.552041 165.066089,236.947339 C165.066089,327.877778 240.793699,402.587432 332.79674,402.150963 L411.038924,402.150963 C501.952976,402.586771 584.933911,327.857939 584.933911,236.947339 Z M333.166996,82.6223815 C249.097073,82.6488342 180.972583,150.929824 180.952783,235.202123 C180.972583,319.459873 249.096413,387.73425 333.166996,387.760703 C417.256719,387.73425 485.395069,319.459873 485.406949,235.202123 C485.394409,150.929824 417.256719,82.6488342 333.166996,82.6223815 Z M236.682602,235.202123 C236.761801,194.021908 262.428934,158.90597 298.622956,144.951518 L298.622956,325.431566 C262.428934,311.48505 236.761141,276.388291 236.682602,235.202123 Z M367.697836,325.471245 L367.697836,144.945566 C403.905059,158.866291 429.611791,194.002068 429.67779,235.202123 C429.611791,276.414743 403.905059,311.524068 367.697836,325.471245 Z",
           id: "Rectangle-1"
@@ -868,12 +868,12 @@
         }, /*#__PURE__*/React__default['default'].createElement("g", {
           id: "Page-1",
           stroke: "none",
-          "stroke-width": "1",
+          strokeWidth: "1",
           fill: "none",
-          "fill-rule": "evenodd"
+          fillRule: "evenodd"
         }, /*#__PURE__*/React__default['default'].createElement("g", {
           id: "unionpay",
-          "fill-rule": "nonzero"
+          fillRule: "nonzero"
         }, /*#__PURE__*/React__default['default'].createElement("rect", {
           id: "Rectangle-path",
           fill: "#FFFFFF",
@@ -930,9 +930,9 @@
         }, /*#__PURE__*/React__default['default'].createElement("g", {
           id: "Page-1",
           stroke: "none",
-          "stroke-width": "1",
+          strokeWidth: "1",
           fill: "none",
-          "fill-rule": "evenodd"
+          fillRule: "evenodd"
         }, /*#__PURE__*/React__default['default'].createElement("g", {
           id: "unionpay",
           fill: "#393939"
@@ -1004,10 +1004,10 @@
           y2: "49.9998574%",
           id: "linearGradient-1"
         }, /*#__PURE__*/React__default['default'].createElement("stop", {
-          "stop-color": "#007B40",
+          stopColor: "#007B40",
           offset: "0%"
         }), /*#__PURE__*/React__default['default'].createElement("stop", {
-          "stop-color": "#55B330",
+          stopColor: "#55B330",
           offset: "100%"
         })), /*#__PURE__*/React__default['default'].createElement("linearGradient", {
           x1: "0.471693172%",
@@ -1016,10 +1016,10 @@
           y2: "49.999826%",
           id: "linearGradient-2"
         }, /*#__PURE__*/React__default['default'].createElement("stop", {
-          "stop-color": "#1D2970",
+          stopColor: "#1D2970",
           offset: "0%"
         }), /*#__PURE__*/React__default['default'].createElement("stop", {
-          "stop-color": "#006DBA",
+          stopColor: "#006DBA",
           offset: "100%"
         })), /*#__PURE__*/React__default['default'].createElement("linearGradient", {
           x1: "0.113880772%",
@@ -1028,20 +1028,20 @@
           y2: "50.0008964%",
           id: "linearGradient-3"
         }, /*#__PURE__*/React__default['default'].createElement("stop", {
-          "stop-color": "#6E2B2F",
+          stopColor: "#6E2B2F",
           offset: "0%"
         }), /*#__PURE__*/React__default['default'].createElement("stop", {
-          "stop-color": "#E30138",
+          stopColor: "#E30138",
           offset: "100%"
         }))), /*#__PURE__*/React__default['default'].createElement("g", {
           id: "Page-1",
           stroke: "none",
-          "stroke-width": "1",
+          strokeWidth: "1",
           fill: "none",
-          "fill-rule": "evenodd"
+          fillRule: "evenodd"
         }, /*#__PURE__*/React__default['default'].createElement("g", {
           id: "jcb",
-          "fill-rule": "nonzero"
+          fillRule: "nonzero"
         }, /*#__PURE__*/React__default['default'].createElement("rect", {
           id: "Rectangle-1",
           fill: "#0E4C96",
@@ -1082,9 +1082,9 @@
         }, /*#__PURE__*/React__default['default'].createElement("g", {
           id: "Page-1",
           stroke: "none",
-          "stroke-width": "1",
+          strokeWidth: "1",
           fill: "none",
-          "fill-rule": "evenodd"
+          fillRule: "evenodd"
         }, /*#__PURE__*/React__default['default'].createElement("g", {
           id: "jcb",
           fill: "#393939"
