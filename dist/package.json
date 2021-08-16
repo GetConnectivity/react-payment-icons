@@ -16,5 +16,6 @@
   "homepage": "https://github.com/GetConnectivity/react-payment-icons#readme",
   "peerDependencies": {
     "react": "*"
-  }
+  },
+  "dependencies": {}
 }

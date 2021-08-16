@@ -11,17 +11,12 @@ const commonjs = require('@rollup/plugin-commonjs')
 const pkg = require('../package.json')
 
 const babelPresets = [["@babel/preset-env", {"modules": false}], "@babel/preset-react"];
-const babelPlugins = [
-    "@babel/plugin-external-helpers"
-];
 
 const bundles = [
     {
         format: 'umd', ext: '.js',
         plugins: [],
         babelPresets: babelPresets,
-        babelPlugins: babelPlugins,
-        babelHelpers: "external",
         moduleName: 'react-payment-icons'
     }
 ];
@@ -43,8 +38,7 @@ for (const config of bundles) {
                 babelrc: false,
                 exclude: 'node_modules/**',
                 presets: config.babelPresets,
-                plugins: config.babelPlugins,
-                babelHelpers: config.babelHelpers,
+                babelHelpers: "bundled",
             }),
             nodeResolve({
                 jsnext: true,
