@@ -8,6 +8,124 @@
 
   var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
 
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  function _defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }
+
+  function _createClass(Constructor, protoProps, staticProps) {
+    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) _defineProperties(Constructor, staticProps);
+    return Constructor;
+  }
+
+  function _defineProperty(obj, key, value) {
+    if (key in obj) {
+      Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+      });
+    } else {
+      obj[key] = value;
+    }
+
+    return obj;
+  }
+
+  function _inherits(subClass, superClass) {
+    if (typeof superClass !== "function" && superClass !== null) {
+      throw new TypeError("Super expression must either be null or a function");
+    }
+
+    subClass.prototype = Object.create(superClass && superClass.prototype, {
+      constructor: {
+        value: subClass,
+        writable: true,
+        configurable: true
+      }
+    });
+    if (superClass) _setPrototypeOf(subClass, superClass);
+  }
+
+  function _getPrototypeOf(o) {
+    _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
+      return o.__proto__ || Object.getPrototypeOf(o);
+    };
+    return _getPrototypeOf(o);
+  }
+
+  function _setPrototypeOf(o, p) {
+    _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+      o.__proto__ = p;
+      return o;
+    };
+
+    return _setPrototypeOf(o, p);
+  }
+
+  function _isNativeReflectConstruct() {
+    if (typeof Reflect === "undefined" || !Reflect.construct) return false;
+    if (Reflect.construct.sham) return false;
+    if (typeof Proxy === "function") return true;
+
+    try {
+      Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {}));
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function _assertThisInitialized(self) {
+    if (self === void 0) {
+      throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+    }
+
+    return self;
+  }
+
+  function _possibleConstructorReturn(self, call) {
+    if (call && (typeof call === "object" || typeof call === "function")) {
+      return call;
+    } else if (call !== void 0) {
+      throw new TypeError("Derived constructors may only return object or undefined");
+    }
+
+    return _assertThisInitialized(self);
+  }
+
+  function _createSuper(Derived) {
+    var hasNativeReflectConstruct = _isNativeReflectConstruct();
+
+    return function _createSuperInternal() {
+      var Super = _getPrototypeOf(Derived),
+          result;
+
+      if (hasNativeReflectConstruct) {
+        var NewTarget = _getPrototypeOf(this).constructor;
+
+        result = Reflect.construct(Super, arguments, NewTarget);
+      } else {
+        result = Super.apply(this, arguments);
+      }
+
+      return _possibleConstructorReturn(this, result);
+    };
+  }
+
   var propTypes = {exports: {}};
 
   /**
@@ -100,21 +218,19 @@
   var DEFAULT_HEIGHT = 29;
   var DEFAULT_WIDTH = 45;
 
-  function _createSuper$5(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$5(); return function _createSuperInternal() { var Super = babelHelpers.getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = babelHelpers.getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return babelHelpers.possibleConstructorReturn(this, result); }; }
-
-  function _isNativeReflectConstruct$5() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
   var Visa$1 = /*#__PURE__*/function (_Component) {
-    babelHelpers.inherits(Visa, _Component);
+    _inherits(Visa, _Component);
 
-    var _super = _createSuper$5(Visa);
+    var _super = _createSuper(Visa);
 
     function Visa(props, context) {
       var _this;
 
-      babelHelpers.classCallCheck(this, Visa);
+      _classCallCheck(this, Visa);
+
       _this = _super.call(this, props, context);
-      babelHelpers.defineProperty(babelHelpers.assertThisInitialized(_this), "renderFlat", function () {
+
+      _defineProperty(_assertThisInitialized(_this), "renderFlat", function () {
         var p = _this.props;
         var h = "".concat(p.height, "px");
         var w = "".concat(p.width, "px");
@@ -162,7 +278,8 @@
           fill: "#F2AE14"
         }))));
       });
-      babelHelpers.defineProperty(babelHelpers.assertThisInitialized(_this), "renderMono", function () {
+
+      _defineProperty(_assertThisInitialized(_this), "renderMono", function () {
         var p = _this.props;
         var h = "".concat(p.height, "px");
         var w = "".concat(p.width, "px");
@@ -186,10 +303,11 @@
           id: "Rectangle-1"
         }))));
       });
+
       return _this;
     }
 
-    babelHelpers.createClass(Visa, [{
+    _createClass(Visa, [{
       key: "render",
       value: function render() {
         var p = this.props;
@@ -203,35 +321,35 @@
         }
       }
     }]);
+
     return Visa;
   }(React.Component);
 
-  babelHelpers.defineProperty(Visa$1, "propTypes", {
+  _defineProperty(Visa$1, "propTypes", {
     type: PropTypes.string,
     height: PropTypes.number,
     width: PropTypes.number
   });
-  babelHelpers.defineProperty(Visa$1, "defaultProps", {
+
+  _defineProperty(Visa$1, "defaultProps", {
     type: "flat",
     height: DEFAULT_HEIGHT,
     width: DEFAULT_WIDTH
   });
 
-  function _createSuper$4(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$4(); return function _createSuperInternal() { var Super = babelHelpers.getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = babelHelpers.getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return babelHelpers.possibleConstructorReturn(this, result); }; }
-
-  function _isNativeReflectConstruct$4() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
   var Discover$1 = /*#__PURE__*/function (_Component) {
-    babelHelpers.inherits(Discover, _Component);
+    _inherits(Discover, _Component);
 
-    var _super = _createSuper$4(Discover);
+    var _super = _createSuper(Discover);
 
     function Discover(props, context) {
       var _this;
 
-      babelHelpers.classCallCheck(this, Discover);
+      _classCallCheck(this, Discover);
+
       _this = _super.call(this, props, context);
-      babelHelpers.defineProperty(babelHelpers.assertThisInitialized(_this), "renderFlat", function () {
+
+      _defineProperty(_assertThisInitialized(_this), "renderFlat", function () {
         var p = _this.props;
         var h = "".concat(p.height, "px");
         var w = "".concat(p.width, "px");
@@ -254,7 +372,8 @@
           d: "M415.13086 161.21289C446.07103 161.21289 471.15234 184.79287 471.15234 213.92188L471.15234 213.95508C471.15234 243.08408 446.07103 266.69727 415.13086 266.69727 384.19069 266.69727 359.10938 243.08408 359.10938 213.95508L359.10938 213.92188C359.10938 184.79287 384.19069 161.21289 415.13086 161.21289L415.13086 161.21289 415.13086 161.21289zM779.981917 288.361069C753.932037 306.691919 558.904907 437.700579 221.228007 500.98412L724.989727 500.98412C755.355357 500.98412 779.981917 476.35474 779.981917 445.980209L779.981917 288.361069 779.981917 288.361069 779.981917 288.361069z"
         })));
       });
-      babelHelpers.defineProperty(babelHelpers.assertThisInitialized(_this), "renderMono", function () {
+
+      _defineProperty(_assertThisInitialized(_this), "renderMono", function () {
         var p = _this.props;
         var h = "".concat(p.height, "px");
         var w = "".concat(p.width, "px");
@@ -280,10 +399,11 @@
           id: "Rectangle-1"
         }))));
       });
+
       return _this;
     }
 
-    babelHelpers.createClass(Discover, [{
+    _createClass(Discover, [{
       key: "render",
       value: function render() {
         var p = this.props;
@@ -297,35 +417,35 @@
         }
       }
     }]);
+
     return Discover;
   }(React.Component);
 
-  babelHelpers.defineProperty(Discover$1, "propTypes", {
+  _defineProperty(Discover$1, "propTypes", {
     type: PropTypes.string,
     height: PropTypes.number,
     width: PropTypes.number
   });
-  babelHelpers.defineProperty(Discover$1, "defaultProps", {
+
+  _defineProperty(Discover$1, "defaultProps", {
     type: "flat",
     height: DEFAULT_HEIGHT,
     width: DEFAULT_WIDTH
   });
 
-  function _createSuper$3(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$3(); return function _createSuperInternal() { var Super = babelHelpers.getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = babelHelpers.getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return babelHelpers.possibleConstructorReturn(this, result); }; }
-
-  function _isNativeReflectConstruct$3() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
   var Mastercard$1 = /*#__PURE__*/function (_Component) {
-    babelHelpers.inherits(Mastercard, _Component);
+    _inherits(Mastercard, _Component);
 
-    var _super = _createSuper$3(Mastercard);
+    var _super = _createSuper(Mastercard);
 
     function Mastercard(props, context) {
       var _this;
 
-      babelHelpers.classCallCheck(this, Mastercard);
+      _classCallCheck(this, Mastercard);
+
       _this = _super.call(this, props, context);
-      babelHelpers.defineProperty(babelHelpers.assertThisInitialized(_this), "renderFlat", function () {
+
+      _defineProperty(_assertThisInitialized(_this), "renderFlat", function () {
         var p = _this.props;
         var h = "".concat(p.height, "px");
         var w = "".concat(p.width, "px");
@@ -441,7 +561,8 @@
           fill: "#FFFFFF"
         }))));
       });
-      babelHelpers.defineProperty(babelHelpers.assertThisInitialized(_this), "renderMono", function () {
+
+      _defineProperty(_assertThisInitialized(_this), "renderMono", function () {
         var p = _this.props;
         var h = "".concat(p.height, "px");
         var w = "".concat(p.width, "px");
@@ -466,10 +587,11 @@
           id: "Rectangle-1"
         }))));
       });
+
       return _this;
     }
 
-    babelHelpers.createClass(Mastercard, [{
+    _createClass(Mastercard, [{
       key: "render",
       value: function render() {
         var p = this.props;
@@ -483,35 +605,35 @@
         }
       }
     }]);
+
     return Mastercard;
   }(React.Component);
 
-  babelHelpers.defineProperty(Mastercard$1, "propTypes", {
+  _defineProperty(Mastercard$1, "propTypes", {
     type: PropTypes.string,
     height: PropTypes.number,
     width: PropTypes.number
   });
-  babelHelpers.defineProperty(Mastercard$1, "defaultProps", {
+
+  _defineProperty(Mastercard$1, "defaultProps", {
     type: "flat",
     height: DEFAULT_HEIGHT,
     width: DEFAULT_WIDTH
   });
 
-  function _createSuper$2(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$2(); return function _createSuperInternal() { var Super = babelHelpers.getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = babelHelpers.getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return babelHelpers.possibleConstructorReturn(this, result); }; }
-
-  function _isNativeReflectConstruct$2() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
   var Amex$1 = /*#__PURE__*/function (_Component) {
-    babelHelpers.inherits(Amex, _Component);
+    _inherits(Amex, _Component);
 
-    var _super = _createSuper$2(Amex);
+    var _super = _createSuper(Amex);
 
     function Amex(props, context) {
       var _this;
 
-      babelHelpers.classCallCheck(this, Amex);
+      _classCallCheck(this, Amex);
+
       _this = _super.call(this, props, context);
-      babelHelpers.defineProperty(babelHelpers.assertThisInitialized(_this), "renderFlat", function () {
+
+      _defineProperty(_assertThisInitialized(_this), "renderFlat", function () {
         var p = _this.props;
         var h = "".concat(p.height, "px");
         var w = "".concat(p.width, "px");
@@ -547,7 +669,8 @@
           fill: "#FFFFFF"
         }))));
       });
-      babelHelpers.defineProperty(babelHelpers.assertThisInitialized(_this), "renderMono", function () {
+
+      _defineProperty(_assertThisInitialized(_this), "renderMono", function () {
         var p = _this.props;
         var h = "".concat(p.height, "px");
         var w = "".concat(p.width, "px");
@@ -571,10 +694,11 @@
           id: "American"
         }))));
       });
+
       return _this;
     }
 
-    babelHelpers.createClass(Amex, [{
+    _createClass(Amex, [{
       key: "render",
       value: function render() {
         var p = this.props;
@@ -588,35 +712,35 @@
         }
       }
     }]);
+
     return Amex;
   }(React.Component);
 
-  babelHelpers.defineProperty(Amex$1, "propTypes", {
+  _defineProperty(Amex$1, "propTypes", {
     type: PropTypes.string,
     height: PropTypes.number,
     width: PropTypes.number
   });
-  babelHelpers.defineProperty(Amex$1, "defaultProps", {
+
+  _defineProperty(Amex$1, "defaultProps", {
     type: "flat",
     height: DEFAULT_HEIGHT,
     width: DEFAULT_WIDTH
   });
 
-  function _createSuper$1(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct$1(); return function _createSuperInternal() { var Super = babelHelpers.getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = babelHelpers.getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return babelHelpers.possibleConstructorReturn(this, result); }; }
-
-  function _isNativeReflectConstruct$1() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
   var Cup$1 = /*#__PURE__*/function (_Component) {
-    babelHelpers.inherits(Cup, _Component);
+    _inherits(Cup, _Component);
 
-    var _super = _createSuper$1(Cup);
+    var _super = _createSuper(Cup);
 
     function Cup(props, context) {
       var _this;
 
-      babelHelpers.classCallCheck(this, Cup);
+      _classCallCheck(this, Cup);
+
       _this = _super.call(this, props, context);
-      babelHelpers.defineProperty(babelHelpers.assertThisInitialized(_this), "renderFlat", function () {
+
+      _defineProperty(_assertThisInitialized(_this), "renderFlat", function () {
         var p = _this.props;
         var h = "".concat(p.height, "px");
         var w = "".concat(p.width, "px");
@@ -677,7 +801,8 @@
           fill: "#FEFEFE"
         }))));
       });
-      babelHelpers.defineProperty(babelHelpers.assertThisInitialized(_this), "renderMono", function () {
+
+      _defineProperty(_assertThisInitialized(_this), "renderMono", function () {
         var p = _this.props;
         var h = "".concat(p.height, "px");
         var w = "".concat(p.width, "px");
@@ -701,10 +826,11 @@
           id: "Shape"
         }))));
       });
+
       return _this;
     }
 
-    babelHelpers.createClass(Cup, [{
+    _createClass(Cup, [{
       key: "render",
       value: function render() {
         var p = this.props;
@@ -718,35 +844,35 @@
         }
       }
     }]);
+
     return Cup;
   }(React.Component);
 
-  babelHelpers.defineProperty(Cup$1, "propTypes", {
+  _defineProperty(Cup$1, "propTypes", {
     type: PropTypes.string,
     height: PropTypes.number,
     width: PropTypes.number
   });
-  babelHelpers.defineProperty(Cup$1, "defaultProps", {
+
+  _defineProperty(Cup$1, "defaultProps", {
     type: "flat",
     height: DEFAULT_HEIGHT,
     width: DEFAULT_WIDTH
   });
 
-  function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = babelHelpers.getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = babelHelpers.getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return babelHelpers.possibleConstructorReturn(this, result); }; }
-
-  function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-
   var Jcb$1 = /*#__PURE__*/function (_Component) {
-    babelHelpers.inherits(Jcb, _Component);
+    _inherits(Jcb, _Component);
 
     var _super = _createSuper(Jcb);
 
     function Jcb(props, context) {
       var _this;
 
-      babelHelpers.classCallCheck(this, Jcb);
+      _classCallCheck(this, Jcb);
+
       _this = _super.call(this, props, context);
-      babelHelpers.defineProperty(babelHelpers.assertThisInitialized(_this), "renderFlat", function () {
+
+      _defineProperty(_assertThisInitialized(_this), "renderFlat", function () {
         var p = _this.props;
         var h = "".concat(p.height, "px");
         var w = "".concat(p.width, "px");
@@ -827,7 +953,8 @@
           fill: "url(#linearGradient-3)"
         }))));
       });
-      babelHelpers.defineProperty(babelHelpers.assertThisInitialized(_this), "renderMono", function () {
+
+      _defineProperty(_assertThisInitialized(_this), "renderMono", function () {
         var p = _this.props;
         var h = "".concat(p.height, "px");
         var w = "".concat(p.width, "px");
@@ -851,10 +978,11 @@
           id: "Shape"
         }))));
       });
+
       return _this;
     }
 
-    babelHelpers.createClass(Jcb, [{
+    _createClass(Jcb, [{
       key: "render",
       value: function render() {
         var p = this.props;
@@ -868,15 +996,17 @@
         }
       }
     }]);
+
     return Jcb;
   }(React.Component);
 
-  babelHelpers.defineProperty(Jcb$1, "propTypes", {
+  _defineProperty(Jcb$1, "propTypes", {
     type: PropTypes.string,
     height: PropTypes.number,
     width: PropTypes.number
   });
-  babelHelpers.defineProperty(Jcb$1, "defaultProps", {
+
+  _defineProperty(Jcb$1, "defaultProps", {
     type: "flat",
     height: DEFAULT_HEIGHT,
     width: DEFAULT_WIDTH
